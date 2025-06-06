@@ -776,6 +776,19 @@
             hero.style.backgroundPosition = `${50 + mouseX * 5}% ${50 + mouseY * 5}%`;
         });
     </script>
+        <script>
+        // Disable right-click
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+        });
+
+        // Disable Ctrl+U
+        document.addEventListener("keydown", function(e) {
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+            }
+        });
+    </script>
 
     <style>
         .ripple {
